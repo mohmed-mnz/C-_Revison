@@ -236,6 +236,29 @@ namespace Rev
             //WriteLine(func(2,1));
             //WriteLine(evennum(31));
             #endregion
+
+            #region IEnumeration && Iteration
+            //   List<employee> emp = new List<employee>()
+            //{
+            //    new employee() {Id=1,Name="Ahmed",Salary=5200.2m,Department="IT"},
+            //    new employee() {Id=2,Name="Eman",Salary=4200.2m,Department="IS"},
+            //    new employee() {Id=3,Name="Mohamed",Salary=3200.2m,Department="CS"},
+            //    new employee() {Id=4,Name="Israa",Salary=2500.2m,Department="NetWork"},
+            //    new employee() {Id=5,Name="Mariam",Salary=1500.2m,Department="BI"}
+            //};
+            //   employee emp1 = new employee() { Id = 6 ,Name="Mohsen" ,Salary=4200m ,Department="IS"};
+            //   employee employee2 = new employee() { Id = 6, Name = "Mohsen", Salary = 4200m, Department = "IS" };
+            //   WriteLine( emp1 == employee2);//without overloading ==  it compare the ref not that content
+            //   WriteLine(emp1.Equals(employee2));
+            #region IEnumerable
+
+            //var ints = new FiveIntegers(1, 2, 3, 4, 5);
+            //foreach (int i in ints)
+            //{
+            //    Console.WriteLine(i);
+            //} 
+            #endregion
+            #endregion
         }
         #region Generics
         /*Generic  Method*
