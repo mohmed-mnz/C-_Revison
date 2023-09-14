@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Drawing;
-using System.Security.Cryptography.X509Certificates;
+﻿using static Rev.Program;
 using static System.Console;
 namespace Rev
 {
@@ -259,108 +257,111 @@ namespace Rev
             //} 
             #endregion
             #endregion
+
+            #region List && Dictionary
+
+            #region List
+            //var egypt = new Country { Name="Egypt" ,ISOCode="EGY"};
+            //var palastaine = new Country { Name= "Palastaine", ISOCode= "PSE" };
+            //var moracoo = new Country { Name= "Moracoo", ISOCode="MA"};
+            //var algeria = new Country { Name= "Algeria ", ISOCode="DZ"};
+            //var iraq = new Country { Name = "Iraq", ISOCode = "IRQ" };
+            //var afaganstan = new Country { Name = "Afaganstan", ISOCode = "AFG" };
+            //var togo = new Country { Name = "Togo", ISOCode = "TG" };
+            //Country[] countries = {egypt,palastaine,moracoo,algeria,iraq, afaganstan,togo};
+            ////ctor
+            ////List<Country> list = new List<Country>();
+            ////List<Country> list = new List<Country>(3);
+            //List<Country> list = new List<Country>(countries);
+            //print(list);
+            //Console.WriteLine("-----------------------------------------------------------");
+            ////Methods
+            ////add && Insert
+            //list.Add(new Country { Name = "Iraq", ISOCode = "IRQ" });
+            //list.Add(new Country { Name = "Afaganstan", ISOCode = "AFG" });
+            //print(list);
+            //Console.WriteLine("-----------------------------------------------------------");
+            ////list.AddRange(countries);
+            //Console.WriteLine("-----------------------------------------------------------");
+            //print(list);
+            ////insert at and inser range
+            //list.Insert(1, new Country { Name = "United State OF America", ISOCode = "USA" });
+            //print(list);
+            //Console.WriteLine("-----------------------------------------------------------");
+            ////list.InsertRange(0, countries);
+            //Console.WriteLine("-----------------------------------------------------------");
+            //print(list);
+
+
+
+            //REMOVE && REMOVE AT
+            //list.RemoveAt(0);
+            //print(list);
+            //Console.WriteLine("-----------------------------------------------------------");
+            //list.RemoveAll(x=>x.Name.EndsWith("o"));
+            //print(list);
+            //Console.WriteLine("-----------------------------------------------------------");
+            //list.RemoveRange(0, list.Count);
+            //print(list);
+            #endregion
+
+            #region Dictionary
+            //var articale = "DOTNET is a free cross-platform and open source developer platform "+"for bulding many diffrent types of app"+"with dot net u can use multiple languages and lib "+"to build for web and iot";
+            //Dictionary<char,List<string>>letter=new Dictionary<char,List<string>>();
+            //foreach(var item  in articale.Split())
+            //{
+            //    foreach(var ch in item)
+            //    {
+            //        if (!letter.ContainsKey(char.ToLower(ch)))
+            //        {
+            //            letter.Add(char.ToLower(ch) , new List<string> { item.ToLower()});
+            //        }
+            //        else
+            //        {
+            //            letter[char.ToLower(ch)].Add(item);
+            //        }
+            //    }
+            //}
+            //foreach (var item in letter)
+            //{
+            //    Console.Write($"'{item.Key}': ");
+            //    foreach (var item1 in item.Value)
+            //    {
+            //        Console.WriteLine($"\t \t \"{item1}");
+            //    }
+            //}
+
+            //var emps=new List<employee> 
+            //{
+            //    new employee {Id = 100, Name = "Reem S.", Report_To = null},
+            //    new employee {Id = 101, Name = "Raed M.", Report_To = 100 },
+            //    new employee {Id = 102, Name = "Ali B.", Report_To = 100 },
+            //    new employee {Id = 103, Name = "Abeer S.", Report_To = 102 },
+            //    new employee {Id = 104, Name = "Radwan N.", Report_To = 102 },
+            //    new employee {Id = 105, Name = "Nancy R.", Report_To = 101 },
+            //    new employee {Id = 106, Name = "Saleh A.", Report_To = 104 }
+            //};
+            ////var mangers = emps.GroupBy(e => e.Report_To);
+            //var mangerss=emps.ToLookup(e => e.Report_To).ToDictionary(x=>x.Key??-1,x=>x.ToList());
+            //foreach(var emp in mangerss)
+            //{
+            //    if (emp.Key == -1)
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        var manger = emps.FirstOrDefault(x => x.Id == emp.Key);
+            //        WriteLine($"{manger} ");
+            //        foreach(var emp2 in emp.Value)
+            //        {
+            //            Console.WriteLine($"\t \t \" {emp2}");
+            //        }   
+            //    }
+            //}
+            #endregion
+
+            #endregion
         }
-        #region Generics
-        /*Generic  Method*
-        static void value <T>(T value)
-        {
-            WriteLine($"this is ur number {value}");
-        }
-        */
-        /*Generic class*/
-        //class person
-        //{
-        //    private string fname;
-        //    private string lname;
-        //    public person()
-        //    {
-
-        //    }
-        //    public person(string Fname,string Lname)
-        //    {
-        //        fname = Fname;
-        //        lname = Lname;
-        //    }
-        //    public override string ToString()
-        //    {
-        //        return $"{fname} , {lname} \n";
-
-        //    }
-        //}
-        //class any<T> where T:class, new()
-        //{
-        //    private T[] items;
-        //    public void add(T item)
-        //    {
-        //        if(items is null)
-        //        {
-        //            items = new T[] { item};
-
-        //        }
-        //        else
-        //        {
-        //            var length = items.Length;
-        //            var dist=new T[length+1];
-        //            for(var i=0; i<length; i++)
-        //            {
-        //                dist[i] = items[i];
-        //            }
-        //            dist[dist.Length- 1] = item;
-        //            items = dist;
-        //        }
-        //    }
-        //    public void remove(int item)
-        //    {
-        //        if (item < 0||item>items.Length-1)
-        //        {
-        //            return;
-        //        }
-        //        var length = 0;
-        //        var dist = new T[items.Length - 1];
-        //        for (var i=0; i < items.Length; i++)
-        //        {
-        //            if (item == i)
-        //            {
-        //                continue;
-        //            }
-        //            dist[length++] = items[i];
-        //        }
-        //        items = dist;
-        //    }
-        //    public  bool isempty => items is null || items.Length == 0;
-        //    public int count =>items is null? 0 : items.Length;  /*ternery operator*/ 
-        //    public void display()
-        //    {
-        //        Write("{ \n");
-        //        for(var i=0; i < items.Length; i++)
-        //        {
-        //            Write(items[i]);
-        //            if (i > items.Length - 1)
-        //            {
-        //                Write(",");
-        //            }
-        //        }
-        //        WriteLine("}");
-        //    }
-        //}
-        #endregion
-
-        //static void displayNum<T>(IEnumerable<T>list, /*Filter<T>*/ /*Predicate<int>*/ Func<T,bool> filter,Action action )
-        //{
-        //    action(); 
-        //    foreach(var item in list)
-        //    {
-        //        if (filter(item))
-        //        {
-        //            Write("  "+ item+ " " );
-        //        }
-        //    }
-        //}
-        #region Generic functions
-        //static void Print(string name)=>Console.WriteLine(name);
-        //static int add(int x, int y) => x + y;
-
-        //static bool iseven(int num) => num % 2 == 0;
-        #endregion
     }
-} 
+}
